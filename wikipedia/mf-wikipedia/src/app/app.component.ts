@@ -11,11 +11,13 @@ import { ServiciosWikipediaService } from 'src/Servicios/servicios-wikipedia.ser
 export class AppComponent {
   title = 'mf-wikipedia';
   
-  constructor(private cookie: CookieService, private serviciosWikipedoa: ServiciosWikipediaService){}
+  constructor(private cookie: CookieService, private serviciosWikipedia: ServiciosWikipediaService){}
   
   artistaWiki: Wikipedia = new Wikipedia; 
   ngOnInit(): void {
     this.artistaWiki.artista = this.cookie.get('artista')
-    console.log(this.artistaWiki.artista)
+    this.serviciosWikipedia.pedirDatosParaWikikpedia(this.artistaWiki.artista).subscribe(respuesta => 
+      {this.artistaWiki = respuesta
+      console.log(this.artistaWiki)})
   }
 }
