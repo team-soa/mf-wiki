@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  mfwikipedia:
+    image: mfwikipedia
+    build:
+      context: wikipedia/mf-wikipedia
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 4214:4214
