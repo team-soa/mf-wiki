@@ -13,9 +13,13 @@ export class AppComponent {
   
   constructor(private cookie: CookieService, private serviciosWikipedia: ServiciosWikipediaService){}
   
-  artistaWiki: Wikipedia = new Wikipedia; 
+  artistaWiki: Wikipedia = {
+    artista: "Ed Sheeran",
+    info: "Info"
+  }; 
+  
   ngOnInit(): void {
-    this.artistaWiki.artista = this.cookie.get('artista')
+    // this.artistaWiki.artista = this.cookie.get('artista')
     this.serviciosWikipedia.pedirDatosParaWikikpedia(this.artistaWiki.artista).subscribe(respuesta => 
       {this.artistaWiki = respuesta
       console.log(this.artistaWiki)})

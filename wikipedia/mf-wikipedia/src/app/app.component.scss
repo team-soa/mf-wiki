@@ -1,6 +1,6 @@
 .fondoAux{
     position: absolute;
-    top: 0 px;
+    bottom: 0 px;
     right: 0px;
     left: 0px;
     height:10vh;
@@ -8,11 +8,31 @@
 }
 
 .boton{
-    margin-top: 5vh;
     background:  var(--k-secondary);
     color: var(--k-light);
-    margin-left: 25%;
-    width: 50%;
-    border-radius: 50px;
-    box-shadow: 0px 0px 10px var(--k-secondary);
+    margin-left: 0px;
+    width: 100%;
+    border-radius: 0px;
+    border-color: transparent;
   }
+  .boton:hover{
+    background:  var(--k-tertiary);
+
+  }
+
+.header {
+    color: #12001D;
+}
+
+.btn-close{
+    color: #12001D;
+}
+
+.glass-wrap {
+background:  rgba(255, 255, 255,0.7);
+border-top-left-radius: 0px;
+border-top-right-radius: 0px;
+box-shadow: 0 4px 30px rgba(255, 255, 255,0.4);
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);
+}
