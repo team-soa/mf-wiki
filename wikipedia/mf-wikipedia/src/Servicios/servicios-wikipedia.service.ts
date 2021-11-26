@@ -7,7 +7,7 @@ import { Wikipedia } from 'src/Clases/wikipedia';
   providedIn: 'root'
 })
 export class ServiciosWikipediaService {
-  URL = "http://localhost:4004/artist";
+  URL = "http://20.114.85.255:4004/artist";
 
   constructor(private http: HttpClient) { }
 
